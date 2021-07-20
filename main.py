@@ -11,9 +11,9 @@ app = Client("my_account")
 
 
 # Команда type
-@app.on_message(filters.command("ex", prefixes=",") & filters.me)
+@app.on_message(filters.command("e", prefixes=",") & filters.me)
 def type(_, msg):
-    orig_text = msg.text.split(",ex ", maxsplit=1)[1]
+    orig_text = msg.text.split(",e", maxsplit=1)[1]
     text = orig_text
     tbp = ""  # to be printed
     typing_symbol = "▒"
